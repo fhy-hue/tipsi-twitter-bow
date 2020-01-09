@@ -52,14 +52,14 @@ NSString *OAuthorizationHeaderWithCallback(NSURL *url, NSString *method, NSData 
     NSDictionary *additionalQueryParameters = [NSURL ab_parseURLQueryString:[url query]];
     NSDictionary *additionalBodyParameters = nil;
     if(body) {
-        NSString *string = [[[NSString alloc] initWithData:body encoding:NSUTF8StringEncoding] autorelease];
+        NSString *string = [[NSString alloc] initWithData:body encoding:NSUTF8StringEncoding];
         if(string) {
             additionalBodyParameters = [NSURL ab_parseURLQueryString:string];
         }
     }
 
     // combine all parameters
-    NSMutableDictionary *parameters = [[oAuthAuthorizationParameters mutableCopy] autorelease];
+    NSMutableDictionary *parameters = [oAuthAuthorizationParameters mutableCopy];
     if(additionalQueryParameters) [parameters addEntriesFromDictionary:additionalQueryParameters];
     if(additionalBodyParameters) [parameters addEntriesFromDictionary:additionalBodyParameters];
 
@@ -97,7 +97,7 @@ NSString *OAuthorizationHeaderWithCallback(NSURL *url, NSString *method, NSData 
     NSData *signature = HMAC_SHA1(signatureBaseString, key);
     NSString *base64Signature = [signature base64EncodedString];
 
-    NSMutableDictionary *authorizationHeaderDictionary = [[oAuthAuthorizationParameters mutableCopy] autorelease];
+    NSMutableDictionary *authorizationHeaderDictionary = [oAuthAuthorizationParameters mutableCopy];
     [authorizationHeaderDictionary setObject:base64Signature forKey:@"oauth_signature"];
 
     NSMutableArray *authorizationHeaderItems = [NSMutableArray array];

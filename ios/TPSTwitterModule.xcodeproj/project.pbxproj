@@ -8,9 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		31AF49AF1E0000C1001F5419 /* TPSTwitterModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 31AF49AD1E0000C1001F5419 /* TPSTwitterModule.m */; };
-		B834B4291E55A5E7000F2B08 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = B834B4221E55A5E7000F2B08 /* NSData+Base64.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		B834B42A1E55A5E7000F2B08 /* OAuth+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = B834B4261E55A5E7000F2B08 /* OAuth+Additions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		B834B42B1E55A5E7000F2B08 /* OAuthCore.m in Sources */ = {isa = PBXBuildFile; fileRef = B834B4281E55A5E7000F2B08 /* OAuthCore.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B834B4291E55A5E7000F2B08 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = B834B4221E55A5E7000F2B08 /* NSData+Base64.m */; };
+		B834B42A1E55A5E7000F2B08 /* OAuth+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = B834B4261E55A5E7000F2B08 /* OAuth+Additions.m */; };
+		B834B42B1E55A5E7000F2B08 /* OAuthCore.m in Sources */ = {isa = PBXBuildFile; fileRef = B834B4281E55A5E7000F2B08 /* OAuthCore.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -130,6 +130,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 58B511D21A9E6C8500147676;
