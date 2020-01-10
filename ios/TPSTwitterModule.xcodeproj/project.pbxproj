@@ -251,6 +251,8 @@
 					"$(SRCROOT)/../../../React/**",
 					"$(SRCROOT)/../../react-native/React/**",
 					"${SRCROOT}/../example/ios/Pods/Headers/Public/**",
+					"\"${PODS_ROOT}/Headers/Public/TwitterKit\"/**",
+					"\"${PODS_ROOT}/Headers/Public/TwitterCore\"/**",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = TPSTwitterModule;
@@ -265,6 +267,8 @@
 					"${SRCROOT}/../example/ios/Pods/Headers/Public/**",
 					"$(SRCROOT)/../../../React/**",
 					"$(SRCROOT)/../../react-native/React/**",
+					"\"${PODS_ROOT}/Headers/Public/TwitterKit\"/**",
+					"\"${PODS_ROOT}/Headers/Public/TwitterCore\"/**",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = TPSTwitterModule;

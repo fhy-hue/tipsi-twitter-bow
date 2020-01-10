@@ -28,7 +28,7 @@
 
 - (NSString *)ab_actualPath
 {
-    NSString* cfPath = (NSString*)CFURLCopyPath((CFURLRef)self);
+    NSString* cfPath = (NSString*)CFBridgingRelease(CFURLCopyPath((CFURLRef)self));
     return cfPath;
 }
 
@@ -67,7 +67,7 @@
     CFUUIDRef u = CFUUIDCreate(kCFAllocatorDefault);
     CFStringRef s = CFUUIDCreateString(kCFAllocatorDefault, u);
     CFRelease(u);
-    return (NSString *)s;
+    return (NSString *)CFBridgingRelease(s);
 }
 
 @end

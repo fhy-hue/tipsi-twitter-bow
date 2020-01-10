@@ -13,7 +13,7 @@
 static NSInteger SortParameter(NSString *key1, NSString *key2, void *context) {
     NSComparisonResult r = [key1 compare:key2];
     if(r == NSOrderedSame) { // compare by value in this case
-        NSDictionary *dict = (NSDictionary *)context;
+        NSDictionary *dict = (NSDictionary *)CFBridgingRelease(context);
         NSString *value1 = [dict objectForKey:key1];
         NSString *value2 = [dict objectForKey:key2];
         return [value1 compare:value2];
@@ -70,7 +70,7 @@ NSString *OAuthorizationHeaderWithCallback(NSURL *url, NSString *method, NSData 
         [encodedParameters setObject:[value ab_RFC3986EncodedString] forKey:[key ab_RFC3986EncodedString]];
     }
 
-    NSArray *sortedKeys = [[encodedParameters allKeys] sortedArrayUsingFunction:SortParameter context:encodedParameters];
+    NSArray *sortedKeys = [[encodedParameters allKeys] sortedArrayUsingFunction:SortParameter context:(__bridge void * _Nullable)(encodedParameters)];
 
     NSMutableArray *parameterArray = [NSMutableArray array];
     for(NSString *key in sortedKeys) {
