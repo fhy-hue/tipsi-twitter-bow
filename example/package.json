@@ -20,11 +20,11 @@
   },
   "dependencies": {
     "react": "16.0.0-alpha.12",
-    "react-native": "0.48.4",
+    "react-native": "0.70.2",
     "tipsi-twitter": "file:../"
   },
   "devDependencies": {
-    "appium": "1.6.4",
+    "appium": "1.22.3",
     "babel-jest": "21.2.0",
     "babel-preset-react-native": "4.0.0",
     "jest": "21.2.0",
